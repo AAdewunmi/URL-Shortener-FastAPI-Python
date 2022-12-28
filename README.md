@@ -17,6 +17,7 @@ At the end of this tutorial, you’ll have a fully functional API-driven web app
 - Python 3
 - FastAPI
 - SQLite
+- Uvicorn
 
 
 ## 3. What is the MVP?
