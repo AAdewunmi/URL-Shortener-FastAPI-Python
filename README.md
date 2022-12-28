@@ -15,10 +15,12 @@ At the end of this tutorial, you’ll have a fully functional API-driven web app
 ## 2. Tech Stack:
 
 - Python 3
+- FastAPI
+- SQLite
 
 
 ## 3. What is the MVP?
-The minimal viable product is a REST web application that performs CRUD operations, to allow users to shorten URL's.
+The minimal viable product is a REST API driven web application that allow users to create shortened URLs that forward to target URLs.
 
 
 ## 4. What are the sprinkles? 
@@ -27,8 +29,9 @@ The minimal viable product is a REST web application that performs CRUD operatio
 ## 5. When will the project be complete? 
 The project will be complete once all the MVP features have been implemented.
 
+## 6. Licence:
 
-## 6. Original Creator:
+## 7. Original Creator:
 
 Author: Philipp Acsany
 
