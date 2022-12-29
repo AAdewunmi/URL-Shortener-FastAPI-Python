@@ -17,7 +17,17 @@ At the end of this tutorial, you’ll have a fully functional API-driven web app
 - Python 3
 - FastAPI
 - SQLite
+- SQLAlchemy
 - Uvicorn
+
+## 3. Dependencies:
+ 
+```
+(venv) $ python -m pip install fastapi==0.75.0 uvicorn==0.17.6
+(venv) $ python -m pip install sqlalchemy==1.4.32
+(venv) $ python -m pip install python-dotenv==0.19.2
+(venv) $ python -m pip install validators==0.18.2
+```
 
 
 ## 3. What is the MVP?
