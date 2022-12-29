@@ -1,5 +1,6 @@
 # Configuration file
 
+from functools import lru_cache
 from pydantic import BaseSettings
 
 
@@ -9,6 +10,7 @@ class Settings(BaseSettings):
     db_url: str = "sqlite:///./shortener.db"
 
 
+@lru_cache
 def get_settings() -> Settings:
     settings: Settings = Settings()
     print(f"Loading settings for: {settings.env_name}")
