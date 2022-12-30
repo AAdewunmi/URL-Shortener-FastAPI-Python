@@ -37,6 +37,12 @@ BASE_URL="http://127.0.0.1:XXXX"
 DB_URL="sqlite:///./XXXXXXXXXX.db"
 ```
 
+How To:
+
+- Run the live server using uvicorn:
+```commandline
+(venv) $ uvicorn shortener_app.main:app --reload
+```
 
 ## 3. What is the MVP?
 The minimal viable product is a REST API driven web application that allow users to create shortened URLs that forward to target URLs.
