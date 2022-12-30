@@ -14,6 +14,7 @@ At the end of this tutorial, you’ll have a fully functional API-driven web app
 
 ## 2. Tech Stack:
 
+- Swagger UI
 - Python 3
 - FastAPI
 - SQLite
