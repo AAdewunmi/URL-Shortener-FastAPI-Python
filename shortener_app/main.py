@@ -1,11 +1,25 @@
 # main.py
 # FastAPI Implementation
-import validators
-from fastapi import FastAPI, HTTPException
 
-from . import schemas
+import secrets
+
+import validators
+from fastapi import Depends, FastAPI, HTTPException
+from sqlalchemy.orm import Session
+
+from . import models, schemas
+from .database import SessionLocal, engine
 
 app = FastAPI()
+models.Base.metadata.create_all(bind=engine)
+
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 
 def raise_bad_request(message):
