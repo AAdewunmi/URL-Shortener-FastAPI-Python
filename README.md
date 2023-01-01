@@ -45,6 +45,10 @@ How To:
 (venv) $ uvicorn shortener_app.main:app --reload
 ```
 
+- Create SQLite database
+
+> When the server restarted, sqlalchemy automatically created your database in the location that you defined in your DB_URL environment variable. If you used sqlite:///./shortener.db as the value of DB_URL, then there should be a file named shortener.db in the root directory of your project now. That’s your SQLite database!
+
 ## 3. What is the MVP?
 The minimal viable product is a REST API driven web application that allow users to create shortened URLs that forward to target URLs.
 
