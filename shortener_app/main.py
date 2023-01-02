@@ -42,9 +42,13 @@ def create_url(url: schemas.URLBase, db: Session = Depends(get_db)):
     if not validators.url(url.target_url):
         raise_bad_request(message="Your provided URL is not valid")
 
+    # Create URL Key
+    # ===============
     chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     key = "".join(secrets.choice(chars) for _ in range(5))
     secret_key = "".join(secrets.choice(chars) for _ in range(8))
+    # ===============
+    # Create DB URL
     db_url = models.URL(
         target_url=url.target_url, key=key, secret_key=secret_key
     )
