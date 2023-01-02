@@ -26,6 +26,11 @@ def raise_bad_request(message):
     raise HTTPException(status_code=400, detail=message)
 
 
+def raise_not_found(request):
+    message = f"URL '{request.url}' doesn't exist"
+    raise HTTPException(status_code=404, detail=message)
+
+
 @app.get("/")
 def read_root():
     return "Welcome to the URL shortener API ;-)"
