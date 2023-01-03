@@ -5,9 +5,10 @@ import validators
 from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
-
+from starlette.datastructures import URL
 from . import crud, models, schemas
 from .database import SessionLocal, engine
+from .config import get_settings
 
 app = FastAPI()
 models.Base.metadata.create_all(bind=engine)
@@ -19,6 +20,16 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+def get_admin_info(db_url: models.URL) -> schemas.URLInfo:
+    base_url = URL(get_settings().base_url)
+    admin_endpoint = app.url_path_for(
+        "administration info", secret_key=db_url.secret_key
+    )
+    db_url.url = str(base_url.replace(path=db_url.key))
+    db_url.admin_url = str(base_url.replace(path=admin_endpoint))
+    return db_url
 
 
 def raise_bad_request(message):
