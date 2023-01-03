@@ -84,7 +84,6 @@ def get_url_info(
         raise_not_found(request)
 
 
-
 @app.delete("/admin/{secret_key}")
 def delete_url(
         secret_key: str, request: Request, db: Session = Depends(get_db)
