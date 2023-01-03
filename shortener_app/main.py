@@ -78,6 +78,6 @@ def get_url_info(
     if db_url := crud.get_db_url_by_secret_key(db, secret_key=secret_key):
         db_url.url = db_url.key
         db_url.admin_url = db_url.secret_key
-        return db_url
+        return get_admin_info(db_url)
     else:
         raise_not_found(request)
