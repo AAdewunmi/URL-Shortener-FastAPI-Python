@@ -1,5 +1,3 @@
-# $$\textcolor{red}{\text{UNDER CONSTRUCTION}}$$
-
 # Project Title:
 
 URL Shortener With FastAPI and Python
@@ -7,9 +5,7 @@ URL Shortener With FastAPI and Python
 
 ## 1. What is the project?
 
-In this tutorial, you’ll build a URL shortener with Python and FastAPI. URLs can be extremely long and not user-friendly. This is where a URL shortener can come in handy. A URL shortener reduces the number of characters in a URL, making it easier to read, remember, and share.
-
-At the end of this tutorial, you’ll have a fully functional API-driven web app that creates shortened URLs that forward to target URLs.
+In this tutorial, we have built a fully functional FastAPI-driven Python web app that creates shortened URLs that forward to target URLs. URLs can be extremely long and not user-friendly. This is where a URL shortener can come in handy. A URL shortener reduces the number of characters in a URL, making it easier to read, remember, and share.
 
 
 ## 2. Tech Stack:
@@ -19,9 +15,10 @@ At the end of this tutorial, you’ll have a fully functional API-driven web app
 - FastAPI
 - SQLite
 - SQLAlchemy
-- Uvicorn
+- Uvicorn server
 
-## 3. Dependencies:
+## 3. Project Dependencies:
+
  - Installation(s)
 ```
 (venv) $ python -m pip install fastapi==0.75.0 uvicorn==0.17.6
@@ -38,9 +35,28 @@ BASE_URL="http://127.0.0.1:XXXX"
 DB_URL="sqlite:///./XXXXXXXXXX.db"
 ```
 
-How To:
 
-- Run the live server using uvicorn:
+## 4. Installing:
+
+i. Clone the git repo
+
+```
+https://github.com/AAdewunmi/URL-Shortener-FastAPI-Python.git
+```
+
+ii. Open project folder
+
+iii. Explore
+
+😎
+
+
+## 5. How To Use:
+
+i. Open project in prefered IDE. I'm using PyCharm.
+
+ii. Run the live server using uvicorn.
+
 ```commandline
 (venv) $ uvicorn shortener_app.main:app --reload
 ```
@@ -49,19 +65,20 @@ How To:
 
 > When the server restarted, sqlalchemy automatically created your database in the location that you defined in your DB_URL environment variable. If you used sqlite:///./shortener.db as the value of DB_URL, then there should be a file named shortener.db in the root directory of your project now. That’s your SQLite database!
 
-## 3. What is the MVP?
-The minimal viable product is a REST API driven web application that allow users to create shortened URLs that forward to target URLs.
+iii. Open "http://127.0.0.1:8000/docs" in any web browser
 
 
-## 4. What are the sprinkles? 
+## 6. Demo:
+
+![This is an image](screenshot.png)
 
 
-## 5. When will the project be complete? 
-The project will be complete once all the MVP features have been implemented.
+## 7. Contributing:
 
-## 6. Licence:
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## 7. Original Creator:
+
+## 8. Original Creator:
 
 Author: Philipp Acsany
 
