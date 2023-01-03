@@ -53,7 +53,7 @@ iii. Explore
 
 ## 5. How To Use:
 
-i. Open project in prefered IDE. I'm using PyCharm.
+i. Open project in preferred IDE. I'm using PyCharm.
 
 ii. Run the live server using uvicorn.
 
